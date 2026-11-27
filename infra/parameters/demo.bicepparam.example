@@ -1,0 +1,26 @@
+using '../main.bicep'
+
+// Copy this file to my.bicepparam and adjust it for your subscription.
+// Keep secrets out of it. Pass voiceLiveApiKey and prototypeAccessPassword
+// to scripts/deploy.ps1 as secure strings instead.
+
+param location = 'westeurope'
+param namePrefix = 'avatarkiosk'
+
+param speechRegion = 'westeurope'
+param speechVoice = 'en-US-JennyNeural'
+param avatarCharacter = 'lisa'
+param avatarStyle = 'casual-sitting'
+
+param assistantApiUrl = ''
+
+// Leave provisionVoiceLive true to create a Voice Live resource in this deployment.
+// To bring your own, set it to false and fill in voiceLiveEndpoint.
+param provisionVoiceLive = true
+param voiceLiveEndpoint = ''
+param voiceLiveModel = 'gpt-realtime'
+param voiceLiveApiVersion = '2025-10-01'
+param voiceLiveVoice = 'en-US-Ava:DragonHDLatestNeural'
+param voiceLiveAvatarCharacter = 'lisa'
+param voiceLiveAvatarStyle = 'casual-sitting'
+param voiceLiveRegion = 'swedencentral'

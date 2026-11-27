@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.azure/
+infra/main.json
+npm-debug.log*
+*.local
+

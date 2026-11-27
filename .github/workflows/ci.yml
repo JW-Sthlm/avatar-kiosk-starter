@@ -1,0 +1,28 @@
+name: smoke-check
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  smoke:
+    name: typecheck + build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install
+        run: npm ci --no-audit --no-fund
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Build
+        run: npm run build
+      - name: Smoke test in mock mode (no Azure keys)
+        run: |
+          NODE_ENV=production PORT=3000 node dist/server/index.js &
+          for i in $(seq 1 30); do curl -sf http://localhost:3000/health > /dev/null && break; sleep 1; done
+          pwsh ./scripts/smoke-test.ps1 -BaseUrl http://localhost:3000

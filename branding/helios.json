@@ -1,0 +1,24 @@
+{
+  "id": "helios",
+  "partner": {
+    "name": "Aurora",
+    "shortName": "Aurora",
+    "credit": "Deployed by Aurora",
+    "accentColor": "#2dd4bf"
+  },
+  "customer": {
+    "name": "Helios Telecom",
+    "shortName": "Helios",
+    "tagline": "Talk to a smart store advisor."
+  },
+  "voicePersona": {
+    "greetingEn": "Hi, welcome to Helios. I can walk you through our mobile plans or a smart-home bundle. What brought you in today?",
+    "greetingSv": "Hej och välkommen till Helios. Jag kan visa dig våra mobilabonnemang eller ett smart hem-paket. Vad är du nyfiken på idag?",
+    "greetingFr": "Bonjour et bienvenue chez Helios. Je peux vous présenter nos forfaits mobiles ou un pack smart-home. Qu'est-ce qui vous amène aujourd'hui?",
+    "fallbackPrompt": "Let me grab a Helios store advisor for that."
+  },
+  "compliance": {
+    "privacyNotice": "Voice and transcript stay in this session only. Helios advisor available on request.",
+    "showAdvisorHandoff": true
+  }
+}

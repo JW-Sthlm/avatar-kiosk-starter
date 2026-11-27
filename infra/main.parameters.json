@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "westeurope"
+    },
+    "namePrefix": {
+      "value": "avatarkiosk"
+    },
+    "speechRegion": {
+      "value": "westeurope"
+    },
+    "speechVoice": {
+      "value": "en-US-JennyNeural"
+    },
+    "avatarCharacter": {
+      "value": "lisa"
+    },
+    "avatarStyle": {
+      "value": "casual-sitting"
+    },
+    "assistantApiUrl": {
+      "value": ""
+    },
+    "provisionVoiceLive": {
+      "value": true
+    },
+    "voiceLiveEndpoint": {
+      "value": ""
+    },
+    "voiceLiveModel": {
+      "value": "gpt-realtime"
+    },
+    "voiceLiveApiVersion": {
+      "value": "2025-10-01"
+    },
+    "voiceLiveVoice": {
+      "value": "en-US-Ava:DragonHDLatestNeural"
+    },
+    "voiceLiveAvatarCharacter": {
+      "value": "lisa"
+    },
+    "voiceLiveAvatarStyle": {
+      "value": "casual-sitting"
+    },
+    "voiceLiveRegion": {
+      "value": "swedencentral"
+    }
+  }
+}

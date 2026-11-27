@@ -1,0 +1,36 @@
+{
+  "name": "avatar-kiosk-starter",
+  "version": "0.1.0",
+  "description": "Talking avatar kiosk on Azure Voice Live and Azure Speech avatar, with an Express broker that keeps keys server-side.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "dev": "tsx src/server/index.ts",
+    "build": "npm run typecheck && npm run clean && vite build && tsc -p tsconfig.server.json",
+    "start": "node dist/server/index.js",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.server.json --noEmit"
+  },
+  "dependencies": {
+    "@azure/ai-voicelive": "^1.0.0-beta.3",
+    "@azure/core-auth": "^1.10.1",
+    "@vitejs/plugin-basic-ssl": "^2.1.0",
+    "applicationinsights": "^2.9.8",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "microsoft-cognitiveservices-speech-sdk": "^1.49.0",
+    "tsx": "^4.19.2",
+    "vite": "^6.0.7",
+    "ws": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "@types/ws": "^8.18.1",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

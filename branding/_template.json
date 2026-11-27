@@ -1,0 +1,24 @@
+{
+  "id": "<short id, lowercase, no spaces>",
+  "partner": {
+    "name": "<company that builds or runs the kiosk>",
+    "shortName": "<one-word version of that name>",
+    "credit": "<credit line, for example 'Deployed by Aurora'>",
+    "accentColor": "#2dd4bf"
+  },
+  "customer": {
+    "name": "<store name shown on the kiosk>",
+    "shortName": "<one-word store name>",
+    "tagline": "<one line under the title>"
+  },
+  "voicePersona": {
+    "greetingEn": "<first thing the avatar says, in English>",
+    "greetingSv": "<first thing the avatar says, in Swedish>",
+    "greetingFr": "<first thing the avatar says, in French>",
+    "fallbackPrompt": "<what to say when a person takes over>"
+  },
+  "compliance": {
+    "privacyNotice": "<short notice to show before the microphone starts>",
+    "showAdvisorHandoff": true
+  }
+}
